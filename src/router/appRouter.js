@@ -6,12 +6,13 @@ import AuthProvider from '../context/authContext'
 import { ProtectedRoute } from './protectedRoute'
 
 export default function AppRouter() {
-    return (
+  return (
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
-        <Route path='/board' 
+        <Route 
+          path='/board' 
           element={
             <ProtectedRoute>
               <Board/>
