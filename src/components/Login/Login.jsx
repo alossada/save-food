@@ -35,6 +35,11 @@ export default function Login() {
     }
   }
 
+  // función cambio de ruta a Registro
+  const handleChangeRegister = () => {
+    return navigate('/register', { replace: true });
+  };
+
   return (
     <div className="login">
     <div className='login-component'>
@@ -60,11 +65,10 @@ export default function Login() {
           onChange={handleChange}
           placeholder='XXXXX'
           autoComplete='off'
-        />
-        <div className="login-buttons">
-          <button className='form__button--Send'>Iniciar sesion</button>
-          <button className='form__button--login'>Registrate</button>
-        </div>
+        />        
+        <button className='form__button--Send'>Login</button>
+        <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
+
         {error && <p>{error}</p>}  
       </form>
     </div>
