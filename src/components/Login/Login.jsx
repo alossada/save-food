@@ -46,6 +46,7 @@ export default function Login() {
       <div className="login-images">
         <img src={logo} alt="" />
       </div>
+
       <p className='login-title'>INICIAR SESION</p>
       <form className='form' onSubmit={handleSubmit}>
         <p className='login-parraf'>Correo</p>
