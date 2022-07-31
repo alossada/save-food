@@ -36,6 +36,7 @@ export default function Register() {
 
   return (
     <> 
+    <p>Hola 2</p>
       <form className='form' onSubmit={handleSubmit}>
         <label className='form__title' htmlFor='email'>Email</label>
         <input className='form__email'
