@@ -41,18 +41,20 @@ export default function Board() {
               <button className='button-fruit'>
                  <img src={fruit} alt="" />
               </button>
+              <p className='board-word'>Frutas y verduras</p>
               <button className='button-protein'>
               <img src={protein} alt="" />
               </button>
-            </div>
-            <div className="board-one">
+              <p className='board-word'>Proteina</p>
               <button className='buttton-carbohidrat'>
               <img src={carbohidrato} alt="" />
               </button>
+              <p className='board-word'>Carbohidratos</p>
               <button className='food-preparate'>
               <img src={comida} alt="" />
               </button>
-            </div>
+              <p className='board-word'>Comida preparada</p>
+              </div>
           </div>
         </div>
     </div>   
