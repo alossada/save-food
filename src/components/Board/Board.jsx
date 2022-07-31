@@ -1,7 +1,7 @@
 import { useAuth } from '../../context/authContext'
 import '../Board/board.scss'
 import logo from '../../assets/logo.png'
-import home from '../../assets/home.png'
+import home from '../../assets/salir.png'
 import fruit from '../../assets/one.png'
 import protein from '../../assets/two.png'
 import carbohidrato from '../../assets/three.png'
@@ -27,18 +27,6 @@ export default function Board() {
   const handleChangeCategory1 = () => {
     return navigate('/board/fruitvegetable', { replace: true });
   };
-   // función cambio de ruta a Categoria2
-  const handleChangeCategory2 = () => {
-    return navigate('/board/protein', { replace: true });
-  };
-  // función cambio de ruta a Categoria3
-  const handleChangeCategory3 = () => {
-    return navigate('/board/carbohydrate', { replace: true });
-  };
-  // función cambio de ruta a Categoria4
-  const handleChangeCategory4 = () => {
-    return navigate('/board/finishfood', { replace: true });
-  };
 
   return (
     <div className='board-component-general'>
@@ -57,22 +45,32 @@ export default function Board() {
           <p className='board-parraf'>que deseas registrar</p>
           <div className="board-buttons">
             <div className="board-one">
-              <button onClick={handleChangeCategory1} className='button-fruit'>
-                 <img src={fruit} alt="" />
-              </button>
-              <p className='board-word'>Frutas y verduras</p>
-              <button className='button-protein'>
-              <img src={protein} alt="" />
-              </button>
-              <p className='board-word'>Proteina</p>
-              <button className='buttton-carbohidrat'>
-              <img src={carbohidrato} alt="" />
-              </button>
-              <p className='board-word'>Carbohidratos</p>
-              <button className='food-preparate'>
-              <img src={comida} alt="" />
-              </button>
-              <p className='board-word'>Comida preparada</p>
+              <div className="container">
+                <button onClick={handleChangeCategory1} className='button-fruit'>
+                    <img src={fruit} alt="" />
+                </button>
+                <p className='board-word'>Frutas y verduras</p>
+                </div>
+                <div className="container">
+                  <button className='button-protein'>
+                    <img src={protein} alt="" />
+                  </button>
+                  <p className='board-word'>Proteina</p>
+                </div>
+              </div>
+              <div className="board-one">
+                <div className="container">
+                  <button className='buttton-carbohidrat'>
+                  <img src={carbohidrato} alt="" />
+                  </button>
+                  <p className='board-word'>Carbohidratos</p>
+                </div>
+                <div className="container">
+                  <button className='food-preparate'>
+                  <img src={comida} alt="" />
+                  </button>
+                  <p className='board-word'>Procesada</p>
+                </div>
               </div>
           </div>
         </div>
