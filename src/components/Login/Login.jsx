@@ -46,13 +46,14 @@ export default function Login() {
       <div className="login-images">
         <img src={logo} alt="" />
       </div>
-      <p className='login-title'>LOGIN</p>
+
+      <p className='login-title'>INICIAR SESION</p>
       <form className='form' onSubmit={handleSubmit}>
         <p className='login-parraf'>Correo</p>
         <input className='form__email'
           type='email' 
           name='email' 
-          placeholder='myemail@gmail.com'
+          placeholder='dianacl@gmail.com'
           onChange={handleChange}
           autoComplete="off"
         />
@@ -65,11 +66,12 @@ export default function Login() {
           onChange={handleChange}
           placeholder='XXXXX'
           autoComplete='off'
-        />        
-        <button className='form__button--Send'>Login</button>
-        <button className='form__button--login' onClick={handleChangeRegister}>¿Eres nuevo en esto?</button>
-
-        {error && <p>{error}</p>}  
+        />    
+        <div className="login-buttons">
+          <button className='form__button--Send'>Iniciar sesión</button>
+          <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
+        </div>    
+        {Error && <p>{error}</p>}  
       </form>
     </div>
     </div>

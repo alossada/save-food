@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useAuth } from '../../context/authContext';
 import { useNavigate } from 'react-router-dom';
-//import '../../styles/form.css'
+import '../Register/Register.scss'
+import logo from '../../assets/logo.png'
 
 
 export default function Register() {
@@ -40,31 +41,48 @@ export default function Register() {
   };
 
   return (
-    <> 
-    <p>Hola 2</p>
+    <div className='register-component'> 
+      <div className="register-component-general">
+      <div className="register-logo">
+          <img src={logo} alt="" />
+      </div>
+      <p className='register-title'>REGISTRATE</p>
       <form className='form' onSubmit={handleSubmit}>
-        <label className='form__title' htmlFor='email'>Email</label>
+      <label className='register-parraf' htmlFor='email'>Nombre</label>
         <input className='form__email'
           type='email' 
           name='email' 
-          placeholder='myemail@gmail.com'
+          placeholder='Diana Londoño'
+          autoComplete='off'
+          onChange={handleChange}
+        />
+        <label className='register-parraf' htmlFor='email'>Email</label>
+        <input className='form__email'
+          type='email' 
+          name='email' 
+          placeholder='dianacl@gmail.com'
+          autoComplete='off'
           onChange={handleChange}
         />
 
-        <label className='form__title' htmlFor='password'>Contraseña</label>
+        <label className='register-parraf' htmlFor='password'>Contraseña</label>
         <input className='form__password' 
           type='password' 
           name='password' 
           id='password'
           onChange={handleChange}
-          placeholder='xxxxxx'
+          placeholder='XXXXXX'
+          autoComplete='off'
         />
-        <p>Al hacer click en Registrarme aceptas los terminos y condiciones.</p>
-        <button className='form__button--Send'>Registrarme</button>
-        <button className='form__button--login' onClick={handleChangeLogin}>¿Ya tienes cuenta?</button>        
-
-        {error && <p>{error}</p>} 
+        <p id='register-parraf-one'>Al hacer click en Registrarme</p>
+        <p id='register-parraf-two'>aceptas los terminos y condiciones.</p>
+        <div className="register-buttons">
+          <button>Registrarme</button>
+          <button onClick={handleChangeLogin}>¿Ya tienes cuenta?</button>        
+        </div>
+        {Error && <p>{error}</p>} 
       </form>
-    </>
+      </div>
+    </div>
   )
 }
