@@ -34,6 +34,11 @@ export default function Login() {
     }
   }
 
+  // función cambio de ruta a Registro
+  const handleChangeRegister = () => {
+    return navigate('/register', { replace: true });
+  };
+
   return (
     <>
       <form className='form' onSubmit={handleSubmit}>
@@ -55,8 +60,7 @@ export default function Login() {
         />
         
         <button className='form__button--Send'>Login</button>
-        <button className='form__button--Google'>Iniciar sesión con Google</button>
-        <button className='form__button--login'>Registrate</button>
+        <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
         
         {error && <p>{error}</p>}  
       </form>

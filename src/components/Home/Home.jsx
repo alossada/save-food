@@ -10,7 +10,7 @@ export default function Home() {
     return navigate('/login', { replace: true });
   };
 
-   // función cambio de ruta a login
+   // función cambio de ruta a Registro
   const handleChangeRegister = () => {
     return navigate('/register', { replace: true });
   };
