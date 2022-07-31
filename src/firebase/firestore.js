@@ -9,7 +9,7 @@ import {
 const dbDesperdicios = collection(db, 'desperdicios');
 
 // Crear 
-export const createTracking = (cantidad, categoria, uid) => {
+export const createTracking = (uid, cantidad, categoria) => {
   addDoc(dbDesperdicios, {
     cantidad,
     uid,
@@ -17,4 +17,3 @@ export const createTracking = (cantidad, categoria, uid) => {
     fecha: serverTimestamp(),
   });
 }
-
