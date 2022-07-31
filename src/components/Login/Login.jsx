@@ -46,7 +46,7 @@ export default function Login() {
       <div className="login-images">
         <img src={logo} alt="" />
       </div>
-      <p className='login-title'>REGISTRATE</p>
+      <p className='login-title'>LOGIN</p>
       <form className='form' onSubmit={handleSubmit}>
         <p className='login-parraf'>Correo</p>
         <input className='form__email'
@@ -67,7 +67,7 @@ export default function Login() {
           autoComplete='off'
         />        
         <button className='form__button--Send'>Login</button>
-        <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
+        <button className='form__button--login' onClick={handleChangeRegister}>¿Eres nuevo en esto?</button>
 
         {error && <p>{error}</p>}  
       </form>

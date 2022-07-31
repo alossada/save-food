@@ -1,5 +1,5 @@
 import { useAuth } from '../../context/authContext'
-import Traking from './Traking';
+//import Traking from './Traking';
 
 
 export default function Board() { 
@@ -18,11 +18,11 @@ export default function Board() {
       <button onClick={handleLogout}>
         logout
       </button>
-      <h1>        
-        Aca estaran los registros de {user.email}
-        <Traking/>
-      </h1>
-      
+      <p>Elije la categoría de los desechos que deseas registrar</p>
+      <button>Frutas y verduras</button>
+      <button>Proteinas</button>
+      <button>Carbohidratos</button>
+      <button>Comida preparada</button>
     </div>   
   )
 }
