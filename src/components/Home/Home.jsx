@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import home from '../../assets/home.png'
 import '../Home/home.scss'
 import icono from '../../assets/icono.png'
 import { useNavigate } from 'react-router-dom'

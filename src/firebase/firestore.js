@@ -9,7 +9,9 @@ import {
 const dbDesperdicios = collection(db, 'desperdicios');
 
 // Crear 
+
 export const createTracking = (uid, cantidad, categoria) => {
+  console.log(uid, cantidad, categoria)
   addDoc(dbDesperdicios, {
     cantidad,
     uid,

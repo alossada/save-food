@@ -49,7 +49,7 @@ export default function Board() {
           </div>
           <div className="home">
             <button onClick={handleLogout} className="img">
-               <img src={home} alt="" />
+              <img src={home} alt="" />
             </button>
           </div>
         </div>
@@ -58,18 +58,18 @@ export default function Board() {
           <div className="board-buttons">
             <div className="board-one">
               <button onClick={handleChangeCategory1} className='button-fruit'>
-                 <img src={fruit} alt="" />
+                <img src={fruit} alt="" />
               </button>
               <p className='board-word'>Frutas y verduras</p>
-              <button className='button-protein'>
+              <button onClick={handleChangeCategory2} className='button-protein'>
               <img src={protein} alt="" />
               </button>
               <p className='board-word'>Proteina</p>
-              <button className='buttton-carbohidrat'>
+              <button onClick={handleChangeCategory3} className='buttton-carbohidrat'>
               <img src={carbohidrato} alt="" />
               </button>
               <p className='board-word'>Carbohidratos</p>
-              <button className='food-preparate'>
+              <button onClick={handleChangeCategory4} className='food-preparate'>
               <img src={comida} alt="" />
               </button>
               <p className='board-word'>Comida preparada</p>
