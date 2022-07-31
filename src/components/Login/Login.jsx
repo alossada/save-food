@@ -28,9 +28,9 @@ export default function Login() {
     }catch(error){
       console.log(error.code);
       if (error.code === 'auth/user-not-found'){
-        setError('usuario no registrado')
+        setError('Usuario no registrado')
       }else{
-        setError('error al iniciar sesión');
+        setError('Error al iniciar sesión');
       }
     }
   }
@@ -71,7 +71,7 @@ export default function Login() {
           <button className='form__button--Send'>Iniciar sesión</button>
           <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
         </div>    
-        {Error && <p>{error}</p>}  
+        {Error && <p className='error'>{error}</p>}  
       </form>
     </div>
     </div>

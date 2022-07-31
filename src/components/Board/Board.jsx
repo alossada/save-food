@@ -1,5 +1,13 @@
 import { useAuth } from '../../context/authContext'
-//import Traking from './Traking';
+import '../Board/board.scss'
+import logo from '../../assets/logo.png'
+import home from '../../assets/home.png'
+import fruit from '../../assets/one.png'
+import protein from '../../assets/two.png'
+import carbohidrato from '../../assets/three.png'
+import comida from '../../assets/four.png'
+
+
 
 
 export default function Board() { 
@@ -14,15 +22,39 @@ export default function Board() {
   if(loading) return <h1>loading</h1>
 
   return (
-    <div>
-      <button onClick={handleLogout}>
-        logout
-      </button>
-      <p>Elije la categoría de los desechos que deseas registrar</p>
-      <button>Frutas y verduras</button>
-      <button>Proteinas</button>
-      <button>Carbohidratos</button>
-      <button>Comida preparada</button>
+    <div className='board-component-general'>
+        <div className="board-component">
+        <div className="home-logo">
+          <div className="logo">
+              <img src={logo} alt="" />
+          </div>
+          <div className="home">
+            <button onClick={handleLogout} className="img">
+               <img src={home} alt="" />
+            </button>
+          </div>
+        </div>
+          <p className='board-parraf'>Elije la categoría de los desechos</p>
+          <p className='board-parraf'>que deseas registrar</p>
+          <div className="board-buttons">
+            <div className="board-one">
+              <button className='button-fruit'>
+                 <img src={fruit} alt="" />
+              </button>
+              <button className='button-protein'>
+              <img src={protein} alt="" />
+              </button>
+            </div>
+            <div className="board-one">
+              <button className='buttton-carbohidrat'>
+              <img src={carbohidrato} alt="" />
+              </button>
+              <button className='food-preparate'>
+              <img src={comida} alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
     </div>   
   )
 }

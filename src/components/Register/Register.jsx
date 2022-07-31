@@ -30,7 +30,7 @@ export default function Register() {
       if (error.code === 'auth/weak-password'){
         setError('La contraseña no tiene 6 caracteres')
       }else{
-        setError('error al registrar usuario');
+        setError('Error al registrar usuario');
       }
     }
   }
@@ -48,15 +48,7 @@ export default function Register() {
       </div>
       <p className='register-title'>REGISTRATE</p>
       <form className='form' onSubmit={handleSubmit}>
-      <label className='register-parraf' htmlFor='email'>Nombre</label>
-        <input className='form__email'
-          type='email' 
-          name='email' 
-          placeholder='Diana Londoño'
-          autoComplete='off'
-          onChange={handleChange}
-        />
-        <label className='register-parraf' htmlFor='email'>Email</label>
+        <label className='register-parraf' htmlFor='email'>Correo</label>
         <input className='form__email'
           type='email' 
           name='email' 
@@ -74,13 +66,13 @@ export default function Register() {
           placeholder='XXXXXX'
           autoComplete='off'
         />
-        <p id='register-parraf-one'>Al hacer click en Registrarme</p>
-        <p id='register-parraf-two'>aceptas los terminos y condiciones.</p>
+        <p id='register-parraf-one'>Al hacer click en registrarme </p>
+        <p id='register-parraf-two'>acepta el tratamiento de sus datos.</p>
         <div className="register-buttons">
           <button>Registrarme</button>
           <button onClick={handleChangeLogin}>¿Ya tienes cuenta?</button>        
         </div>
-        {Error && <p>{error}</p>} 
+        {Error && <p className='error'>{error}</p>} 
       </form>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
+import home from '../../assets/home.png'
 import '../Home/home.scss'
 import icono from '../../assets/icono.png'
 import { useNavigate } from 'react-router-dom'
@@ -23,7 +24,9 @@ export default function Home() {
     <div className='home-component'>
       <div className="home-component-general">
         <div className="home-logo">
-          <img src={logo} alt="" />
+          <div className="logo">
+              <img src={logo} alt="" />
+          </div>
         </div>
         <p id='home-title'>REDUCE</p>
         <p className='home-p'>Registra la cantidad de</p>
