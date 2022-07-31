@@ -34,6 +34,11 @@ export default function Register() {
     }
   }
 
+  // función cambio de ruta a 
+  const handleChangeLogin = () => {
+    return navigate('/login', { replace: true });
+  };
+
   return (
     <> 
       <form className='form' onSubmit={handleSubmit}>
@@ -55,8 +60,7 @@ export default function Register() {
         />
         <p>Al hacer click en Registrarme aceptas los terminos y condiciones.</p>
         <button className='form__button--Send'>Registrarme</button>
-        <button className='form__button--Google'>Iniciar sesión con Google</button>
-        <button className='form__button--login'>¿Ya tienes cuenta?</button>        
+        <button className='form__button--login' onClick={handleChangeLogin}>¿Ya tienes cuenta?</button>        
 
         {error && <p>{error}</p>} 
       </form>
