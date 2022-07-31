@@ -6,7 +6,7 @@ import fruit from '../../assets/one.png'
 import protein from '../../assets/two.png'
 import carbohidrato from '../../assets/three.png'
 import comida from '../../assets/four.png'
-
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -14,12 +14,31 @@ export default function Board() {
 
   const {user, logout, loading} =useAuth()//me trae la información del usuario (verifica el login)  
   console.log(user);
+  
+  const navigate = useNavigate();
 
   const handleLogout = async() => {
     await logout();    
   }
 
-  if(loading) return <h1>loading</h1>
+  if(loading) return <h1>Loading</h1>
+
+   // función cambio de ruta a Categoria1
+  const handleChangeCategory1 = () => {
+    return navigate('/board/fruitvegetable', { replace: true });
+  };
+   // función cambio de ruta a Categoria2
+  const handleChangeCategory2 = () => {
+    return navigate('/board/protein', { replace: true });
+  };
+  // función cambio de ruta a Categoria3
+  const handleChangeCategory3 = () => {
+    return navigate('/board/carbohydrate', { replace: true });
+  };
+  // función cambio de ruta a Categoria4
+  const handleChangeCategory4 = () => {
+    return navigate('/board/finishfood', { replace: true });
+  };
 
   return (
     <div className='board-component-general'>
@@ -38,7 +57,7 @@ export default function Board() {
           <p className='board-parraf'>que deseas registrar</p>
           <div className="board-buttons">
             <div className="board-one">
-              <button className='button-fruit'>
+              <button onClick={handleChangeCategory1} className='button-fruit'>
                  <img src={fruit} alt="" />
               </button>
               <p className='board-word'>Frutas y verduras</p>

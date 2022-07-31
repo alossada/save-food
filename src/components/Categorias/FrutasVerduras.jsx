@@ -1,11 +1,30 @@
 import React from 'react'
+import { useAuth } from '../../context/authContext';
+import { createTracking } from '../../firebase/firestore'
+import { useNavigate } from 'react-router-dom';
 
 export default function FrutasVerduras() {
+  const { user } = useAuth();
+
+  const saveValue = () => {
+    createTracking(user.id, 'prueba')
+  }
+  const navigate = useNavigate();
+
+   // función cambio de ruta a board
+  const handleChangeBoard = () => {
+    return navigate('/board', { replace: true });
+  };
+
   return (
     <div>
-      <h1>
-        Frutas y verduras
-      </h1>      
+      <button onClick={saveValue}></button>
+      <button onClick={saveValue}></button>
+      <button onClick={saveValue}></button>
+      <button onClick={saveValue}></button>
+      <div>
+      <button onClick={handleChangeBoard}>REGRESA</button>
+      </div>
     </div>
   )
 }
