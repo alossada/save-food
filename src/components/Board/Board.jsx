@@ -60,18 +60,20 @@ export default function Board() {
               <button onClick={handleChangeCategory1} className='button-fruit'>
                  <img src={fruit} alt="" />
               </button>
-              <button onClick={handleChangeCategory2} className='button-protein'>
+              <p className='board-word'>Frutas y verduras</p>
+              <button className='button-protein'>
               <img src={protein} alt="" />
               </button>
-            </div>
-            <div className="board-one">
-              <button onClick={handleChangeCategory3} className='buttton-carbohidrat'>
+              <p className='board-word'>Proteina</p>
+              <button className='buttton-carbohidrat'>
               <img src={carbohidrato} alt="" />
               </button>
-              <button onClick={handleChangeCategory4} className='food-preparate'>
+              <p className='board-word'>Carbohidratos</p>
+              <button className='food-preparate'>
               <img src={comida} alt="" />
               </button>
-            </div>
+              <p className='board-word'>Comida preparada</p>
+              </div>
           </div>
         </div>
     </div>   
