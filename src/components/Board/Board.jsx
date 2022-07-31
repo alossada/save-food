@@ -1,9 +1,10 @@
 import { useAuth } from '../../context/authContext'
+import Traking from './Traking';
 
 
 export default function Board() { 
 
-  const {user, logout, loading} =useAuth()//me trae la información del usuario (verifiga el login)  
+  const {user, logout, loading} =useAuth()//me trae la información del usuario (verifica el login)  
   console.log(user);
 
   const handleLogout = async() => {
@@ -18,7 +19,8 @@ export default function Board() {
         logout
       </button>
       <h1>        
-        Aca estaran las notas de {user.email}
+        Aca estaran los registros de {user.email}
+        <Traking/>
       </h1>
       
     </div>   
