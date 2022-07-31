@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useAuth } from '../../context/authContext';
+import logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom';
-//import '../../styles/form.css'
+import '../Login/login.scss'
 
 // vista login
 export default function Login() {
@@ -40,30 +41,37 @@ export default function Login() {
   };
 
   return (
-    <>
+    <div className="login">
+    <div className='login-component'>
+      <div className="login-images">
+        <img src={logo} alt="" />
+      </div>
+      <p className='login-title'>REGISTRATE</p>
       <form className='form' onSubmit={handleSubmit}>
-        <label htmlFor='email'>Email</label>
+        <p className='login-parraf'>Correo</p>
         <input className='form__email'
           type='email' 
           name='email' 
           placeholder='myemail@gmail.com'
           onChange={handleChange}
+          autoComplete="off"
         />
 
-        <label htmlFor='password'>Password</label>
+        <p className='login-parraf'>Contraseña</p>
         <input className='form__password'
           type='password' 
           name='password' 
           id='password'
           onChange={handleChange}
           placeholder='XXXXX'
-        />
-        
+          autoComplete='off'
+        />        
         <button className='form__button--Send'>Login</button>
         <button className='form__button--login' onClick={handleChangeRegister}>Registrate</button>
-        
+
         {error && <p>{error}</p>}  
       </form>
-    </>
+    </div>
+    </div>
   )
 }
