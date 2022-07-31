@@ -1,0 +1,88 @@
+.board-component-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .board-component{
+        margin-top: 10px;
+        max-width: 375px;
+
+
+        .home-logo{
+            margin: 80px 50px 15px 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 1rem;
+               .logo{
+                display: flex;
+                align-items: center;
+                img{
+                  object-fit: contain;
+                  width: 200px;
+                  height: 80px;
+                  }
+               }       
+               .home{
+                display: flex;
+                align-items: center;
+                margin-left: 5px;
+                background-color: none;
+
+                button{
+                    background-color: none;
+                }
+                img{
+                  object-fit: contain;
+                  width: 20px;
+                  height: 20px;
+                  }
+               }
+        
+            }
+
+        .board-parraf{
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .board-buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;      
+            
+            .board-one{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                button{
+                background-color: white;
+                border-radius: 4px;
+                border: none;
+                text-align: center;
+                width: 150px;
+                height: 150px;
+
+
+                img{
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                }
+                }
+
+                .button-fruit{
+                background-image: ('');
+                }
+            }
+        }
+    
+    
+    }
+
+}
